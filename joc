@@ -1,0 +1,28 @@
+intrebari = {
+    "Ce este o variabila?  a. o cutie  b.un numar ce variaza in functie de alte linii din cod  c.o funcție care execută instrucțiuni în cod  d.un tip de date care poate memora numere întregi. ": "a",
+    "Cum comparam doua variabile sau doua valori?   a. folosind =  b. folosind == c.folosim 'compare'  d. folosim << ": "b",
+    "Cu ce este asemanata lista  a.cu un tren cu vagoane  b.cu o scara  c. cu un șir de mărgele pe o ață  d. cu o listă de cumpărături ": "a"
+}
+
+scor = 0
+numar_intrebari = len(intrebari)
+
+print("🎮 Welcome to Trivia Python! Let's see what you remember from this lesson!\n")
+
+for intrebare, raspuns_corect in intrebari.items():
+    raspuns = input(intrebare + " ")
+    
+    if raspuns.lower() == raspuns_corect:
+        print("✅ Right!\n")
+        scor += 1
+    else:
+        print(f"❌ Wrong. The true answer was : {raspuns_corect}\n")
+
+print(f"🏆 Scorul tău final: {scor}/{numar_intrebari}")
+
+if scor == numar_intrebari:
+    print("🌟 Perfect! Now you are a Python Champion!")
+elif scor >= 2:
+    print("👍 Good ! It's almost perfect!")
+else:
+    print("📚 Try again and maybe next time you will win!")
